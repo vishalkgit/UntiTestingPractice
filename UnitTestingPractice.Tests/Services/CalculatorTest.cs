@@ -81,7 +81,48 @@ namespace UnitTestingPractice.Tests.Services
             var res = calculator.IsEven(4);
 
             //assert
-            Assert.Equal(4, res);
+            Assert.True(res, "No is not Even");
+        }
+
+
+        [Fact]
+        public void IsPositive_ReturnCorrectResult()
+        {
+            //arrange
+            var calculator = new Calculator();
+
+            //act
+            var res = calculator.IsPositive(6);
+
+            //assert
+            Assert.True(res,"Number should be grater than 0");
+        }
+
+        [Fact]
+        public void IsOdd_ReturnCorrectResult()
+        {
+
+            //arrange
+            var calulcator = new Calculator();
+
+            //act
+            var res = calulcator.IsOdd(3);
+
+            //assert
+            Assert.True(res, "Number is not odd");
+        }
+
+        [Fact]
+        public void IsNegative_ReturnCorrectResult()
+        {
+            //arrange
+            var calculator = new Calculator();
+
+            //act
+            var res = calculator.IsNegative(-5);
+            //assert
+            Assert.True(res, "Number is Not Negative");
+
         }
     }
 }

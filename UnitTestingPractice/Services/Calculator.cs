@@ -32,20 +32,36 @@ namespace UnitTestingPractice.Services
             return a - b;
         }
 
-        public int IsEven(int a)
+        public bool IsEven(int a)
         {
             if (a % 2 == 0)
-                return a;
+                return true;
             else
-                return -1;
+                return false;
         }
 
-        public int IsPositive(int a)
+        public bool IsOdd(int a)
+        {
+            if (a % 2 != 0)
+                return true;
+            else
+                return false;
+        }
+
+        public bool IsPositive(int a)
         {
             if (a < 0)
-                return -1;
+                return false;
             else
-                return a;
+                return true;
+        }
+
+        public bool IsNegative(int a)
+        {
+            if (a < 0)
+                return true;
+            else
+                return false;
         }
     }
 }
