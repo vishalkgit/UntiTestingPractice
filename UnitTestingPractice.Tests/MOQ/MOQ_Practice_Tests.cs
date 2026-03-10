@@ -88,7 +88,7 @@ namespace UnitTestingPractice.Tests.MOQ
             var service = new Moq_Pal(mockrepo.Object);
 
             //act
-            var test = service.Moq_PalName("madm");
+            var test = service.Moq_PalName("madam");
             //assert
             Assert.Equal("madam", test);
             
