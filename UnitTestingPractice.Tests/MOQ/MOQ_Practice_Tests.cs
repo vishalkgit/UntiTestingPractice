@@ -77,5 +77,21 @@ namespace UnitTestingPractice.Tests.MOQ
             //assert
             Assert.Equal(20, test);
         }
+
+        [Fact]
+        public void IsPalindrome_ReturnCorrectResult()
+        {
+            //arrange
+            var mockrepo = new Mock<IUserRepository>();
+
+            mockrepo.Setup(x => x.Palindrome("madam")).Returns("madam");
+            var service = new Moq_Pal(mockrepo.Object);
+
+            //act
+            var test = service.Moq_PalName("madm");
+            //assert
+            Assert.Equal("madam", test);
+            
+        }
     }
 }

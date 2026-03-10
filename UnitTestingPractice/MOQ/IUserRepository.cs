@@ -17,5 +17,7 @@ namespace UnitTestingPractice.MOQ
         int Sub(int a, int b);
 
         int Mul(int a, int b);
+
+        string Palindrome(string name);
     }
 }
